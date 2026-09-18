@@ -3,12 +3,20 @@ export const initialData = [
     id: 1,
     name: "Baby Yoda",
     status: "Hungry",
-    image: "https://some-url.com/sad-yoda.jpg"
+    images: [
+      "https://placehold.co/200x200?text=Yoda+Sad",
+      "https://placehold.co/200x200?text=Yoda+Happy"
+    ],
+    currentImageIndex: 0
   },
   {
     id: 2,
     name: "Mandalorian",
     status: "Lost",
-    image: "https://some-url.com/lost-mando.jpg"
+    images: [
+      "https://placehold.co/200x200?text=Mando+Lost",
+      "https://placehold.co/200x200?text=Mando+Found"
+    ],
+    currentImageIndex: 0
   }
 ];

@@ -7,28 +7,27 @@ class App extends Component {
     super(props);
     
     // TODO: Initialize state here
-    // this.state = {
-    //   characters: initialData
-    // };
+    this.state = {
+      characters: initialData
+    };
   }
 
   // Method to handle state changes from children
   handleUpdate = (id) => {
-    console.log("Parent received event for ID:", id);
-    // TODO: Logic to update the specific child in this.state
-    // 1. Find the character in state by id
-    // 2. Change their image property (e.g., to a 'happy' version)
-    // 3. Update state using this.setState()
-    
-    /* HINT for students: 
-    const updatedCharacters = this.state.characters.map(char => {
-      if(char.id === id) {
-         return { ...char, image: 'NEW_IMAGE_URL', status: 'Updated!' };
-      }
-      return char;
-    });
-    this.setState({ characters: updatedCharacters });
-    */
+   
+  const updatedCharacters = this.state.characters.map(char => {
+    if (char.id === id) {
+      return {
+        ...char,
+        currentImageIndex: (char.currentImageIndex + 1) % char.images.length
+      };
+    }
+    return char;
+  });
+
+  this.setState({ characters: updatedCharacters });
+
+
   }
 
   render() {
@@ -38,18 +37,19 @@ class App extends Component {
         
         <div className="children-container" style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
           {/* TODO: Map through your state characters here and render ChildComponents */}
-          {/* Example: 
+           
               {this.state && this.state.characters.map(char => (
                 <ChildComponent 
                   key={char.id}
                   id={char.id}
                   name={char.name}
-                  image={char.image}
+                  image={char.images[char.currentImageIndex]}
+
                   status={char.status}
                   onAction={this.handleUpdate}
                 />
               ))} 
-          */}
+          
         </div>
       </div>
     );
