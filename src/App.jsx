@@ -30,6 +30,18 @@ class App extends Component {
 
   }
 
+  //WORK IN PROGRESS - Adopt feature (in class asignment)
+  //
+  //DONE:
+  //Added a third pet in data.js; it renders automatically 
+  //Still to do: 
+  //- Pass handleAdopt down to each card as a prop (onAdopt) inside the.map().
+
+  handleAdopt = (id) => {
+    const remainingCharacters = this.state.characters.filter(char => char.id !== id);
+    this.setState({ characters: remainingCharacters });
+  }
+
   render() {
     return (
       <div className="app-container" style={{ padding: '40px', fontFamily: 'Arial, sans-serif' }}>

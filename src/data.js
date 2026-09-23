@@ -19,4 +19,14 @@ export const initialData = [
     ],
     currentImageIndex: 0
   }
+  {
+    id: 3, 
+    name: "Grogu's Frog",
+    status: "Sleepy",
+    images: [
+      "https://placehold.co/200x200?text=Frog+Sleepy",
+      "https://placehold.co/200x200?text=Frog+Awake"
+    ],
+    currentImageIndex: 0
+  }
 ];

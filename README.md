@@ -11,7 +11,7 @@ Built with class-based React components to practice state, props, and callbacks
    docker compose up --build
 4. Open http://localhost:3000 in your browser.
  
- Note: "The provided Dockerfile pinned Node 18, but Vite 7 requires Node 20+. I updated the base image to node:22-alpine." Either works; the second version reads more like documentation and less like a memo to yourself.
+ Note: "The provided Dockerfile pinned Node 18, but Vite 7 requires Node 20+. I updated the base image to node:22-alpine." 
 
 ## Usage 
 Each card shows a pet; the button cycles its images
